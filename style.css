@@ -1,0 +1,196 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 30px;
+}
+
+h1 {
+    color: #232f3e;
+}
+
+h2 {
+    color: #333333;
+    margin-top: 30px;
+}
+
+button {
+    background-color: #ff9900;
+    color: #111111;
+    border: none;
+    padding: 12px 18px;
+    margin: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: #e68a00;
+}
+.producto {
+    background-color: white;
+    width: 280px;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.producto h3 {
+    color: #232f3e;
+    font-size: 20px;
+}
+
+.producto p {
+    color: #555555;
+}
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+#buscador {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+.producto {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.20);
+}
+
+.producto button {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.productos {
+    align-items: stretch;
+}
+
+.producto h3 {
+    min-height: 48px;
+}
+.etiqueta {
+    display: inline-block;
+    background-color: #232f3e;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+.recomendado {
+    display: inline-block;
+    background-color: #ff9900;
+    color: #111111;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-left: 5px;
+}
+.boton-amazon {
+    display: block;
+    background-color: #ff9900;
+    color: #111111;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px 18px;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.boton-amazon:hover {
+    background-color: #e68a00;
+}
+.cabecera {
+    background-color: #232f3e;
+    color: white;
+    padding: 20px 30px;
+    margin: -30px -30px 30px -30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    color: white;
+    margin: 0;
+}
+
+.logo p {
+    margin: 5px 0 0 0;
+    color: #dddddd;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: #ff9900;
+}
+#ofertas {
+    margin-top: 50px;
+}
+
+.oferta {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+}
+#contacto {
+    margin-top: 50px;
+}
+
+.formulario-contacto {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.formulario-contacto textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.formulario-contacto button {
+    margin: 0;
+}

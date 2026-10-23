@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Tienda de Herramientas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="cabecera">
+
+    <div class="logo">
+        <h1>ProHerramientas</h1>
+        <p>Herramientas, construcción, electricidad y solar</p>
+    </div>
+
+    <nav class="menu">
+        <a href="#">Inicio</a>
+
+        <a href="#productos">Productos</a>
+
+        <a href="#ofertas">Ofertas</a>
+
+       <a href="#contacto">Contacto</a>
+
+    </nav>
+
+</header>
+
+    <h1>Herramientas y productos recomendados</h1>
+    <p>Encuentra herramientas y materiales para tus proyectos.</p>
+
+
+
+<h2>Categorías</h2>
+
+<button class="filtro" data-filtro="construccion">🔨 Construcción</button>
+<button class="filtro" data-filtro="electricidad">⚡ Electricidad</button>
+<button class="filtro" data-filtro="solar">☀️ Solar</button>
+<button class="filtro" data-filtro="herramientas">🔧 Herramientas</button>
+<button class="filtro" data-filtro="todos">🔥 Todos</button>
+
+<input
+    type="text"
+    id="buscador"
+    placeholder="Buscar productos..."
+>
+
+<h2 id="productos">Productos recomendados</h2>
+
+<div class="productos">
+
+<div class="producto" data-categoria="herramientas">
+
+<span class="etiqueta">Herramientas</span>
+
+    <img src="imagenes/taladro.jpg" alt="Taladro percutor inalámbrico">
+
+    <h3>Sundpey Taladro Percutor 70 Nm</h3>
+
+    <p>
+        Taladro inalámbrico para trabajos de bricolaje,
+        montaje y pequeñas obras.
+    </p>
+
+    <p>Precio aproximado: 53,99 €</p>
+
+   <a class="boton-amazon" href="#" target="_blank">
+    Ver en Amazon
+</a>
+
+</div>
+
+<div class="producto" data-categoria="electricidad"> 
+
+<span class="etiqueta">Electricidad</span>
+
+    <img src="imagenes/multimetro.jpg" alt="Multímetro digital">
+
+    <h3>Multímetro digital para electricidad</h3>
+
+    <p>
+        Multímetro para comprobar tensión, continuidad,
+        resistencia y otras mediciones básicas.
+    </p>
+
+    <p>Precio aproximado: 39,99 €</p>
+
+    <a class="boton-amazon" href="#" target="_blank">
+    Ver en Amazon
+</a>
+
+</div>
+
+<div class="producto" data-categoria="construccion">
+
+<span class="etiqueta">Construcción</span>
+
+    <img src="imagenes/laser.jpg" alt="Nivel láser verde con trípode">
+
+    <h3>HYCHIKA Nivel láser verde con trípode</h3>
+
+    <p>
+        Nivel láser pensado para trabajos de construcción,
+        reformas, colocación y medición.
+    </p>
+
+    <p>Precio aproximado: 42,93 €</p>
+
+   <a class="boton-amazon" href="#" target="_blank">
+    Ver en Amazon
+</a>
+
+</div>
+
+<div class="producto" data-categoria="solar">
+
+<span class="etiqueta">solar</span>
+
+<span class="recomendado">Recomendado</span>
+
+    <img src="imagenes/cepillo-solar.jpg" alt="Cepillo telescópico para placas solares">
+
+    <h3>Sillar Cepillo telescópico 7,37 m</h3>
+
+    <p>
+        Cepillo telescópico pensado para limpieza de placas solares,
+        ventanas y superficies exteriores.
+    </p>
+
+    <p>Precio aproximado: 70,99 €</p>
+
+    <a class="boton-amazon" href="#" target="_blank">
+    Ver en Amazon
+</a>
+
+</div>
+
+</div>
+
+<section id="ofertas">
+
+    <h2>Ofertas destacadas</h2>
+
+    <div class="oferta">
+        <h3>Producto recomendado de la semana</h3>
+        <p>
+            Aquí mostraremos herramientas y productos con buena relación
+            calidad-precio o descuentos interesantes.
+        </p>
+
+        <a class="boton-amazon" href="#" target="_blank">
+            Ver oferta
+        </a>
+    </div>
+
+</section> 
+
+<section id="contacto">
+
+    <h2>Contacto</h2>
+
+    <form class="formulario-contacto">
+
+        <input type="text" placeholder="Tu nombre">
+
+        <input type="email" placeholder="Tu correo">
+
+        <textarea placeholder="Escribe tu mensaje"></textarea>
+
+        <button type="submit">Enviar mensaje</button>
+
+    </form>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
