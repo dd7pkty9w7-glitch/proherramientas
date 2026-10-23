@@ -1,2 +1,0 @@
-Branch: main
-Folder: /root
