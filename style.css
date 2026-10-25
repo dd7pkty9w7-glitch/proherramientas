@@ -336,6 +336,7 @@ button:hover {
     border-radius: 12px;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
     line-height: 1.7;
+    box-sizing: border-box;
 }
 
 .guia h2 {
