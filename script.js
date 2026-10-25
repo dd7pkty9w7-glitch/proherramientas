@@ -68,8 +68,15 @@ botonesOferta.forEach((boton) => {
             }
         });
 
-        document
-            .querySelector("#productos")
-            .scrollIntoView({ behavior: "smooth" });
+       const productoVisible = Array.from(
+    document.querySelectorAll(".producto")
+).find((producto) => producto.style.display !== "none");
+
+if (productoVisible) {
+    productoVisible.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+}
     });
 });
