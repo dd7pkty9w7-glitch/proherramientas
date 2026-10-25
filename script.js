@@ -49,6 +49,13 @@ botonesOferta.forEach((boton) => {
         e.preventDefault();
 
         const filtro = boton.dataset.filtro;
+        document.querySelectorAll(".filtro").forEach((botonFiltro) => {
+    botonFiltro.classList.remove("activo");
+
+    if (botonFiltro.dataset.filtro === filtro) {
+        botonFiltro.classList.add("activo");
+    }
+});
 
         document.querySelectorAll(".producto").forEach((producto) => {
             if (

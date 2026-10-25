@@ -322,3 +322,7 @@ button:hover {
     text-decoration: none;
     border-radius: 6px;
 }
+.filtro.activo {
+    background-color: #111827;
+    color: white;
+}
