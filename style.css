@@ -195,6 +195,14 @@ button:hover {
 .formulario-contacto button {
     margin: 0;
 }
+.aviso-afiliados {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #eeeeee;
+    font-size: 14px;
+    color: #555555;
+    text-align: center;
+}
 .producto {
     display: flex;
     flex-direction: column;
