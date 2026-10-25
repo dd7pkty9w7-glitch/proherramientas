@@ -42,3 +42,27 @@ buscador.addEventListener("input", function() {
     });
 
 });
+const botonesOferta = document.querySelectorAll(".boton-oferta");
+
+botonesOferta.forEach((boton) => {
+    boton.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const filtro = boton.dataset.filtro;
+
+        document.querySelectorAll(".producto").forEach((producto) => {
+            if (
+                filtro === "todos" ||
+                producto.dataset.categoria === filtro
+            ) {
+                producto.style.display = "flex";
+            } else {
+                producto.style.display = "none";
+            }
+        });
+
+        document
+            .querySelector("#productos")
+            .scrollIntoView({ behavior: "smooth" });
+    });
+});
