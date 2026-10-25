@@ -1,5 +1,30 @@
 const botones = document.querySelectorAll(".filtro");
 const productos = document.querySelectorAll(".producto");
+const buscador = document.getElementById("buscador");
+const botonesOferta = document.querySelectorAll(".boton-oferta");
+
+function filtrarProductos(categoria) {
+
+    categoria = categoria.toLowerCase();
+
+    productos.forEach(function(producto) {
+
+        const categoriaProducto =
+            producto.dataset.categoria.toLowerCase();
+
+        if (
+            categoria === "todos" ||
+            categoriaProducto === categoria
+        ) {
+            producto.style.display = "flex";
+        } else {
+            producto.style.display = "none";
+        }
+
+    });
+}
+
+/* BOTONES DE CATEGORÍAS */
 
 botones.forEach(function(boton) {
 
@@ -7,23 +32,20 @@ botones.forEach(function(boton) {
 
         const categoria = boton.dataset.filtro;
 
-        productos.forEach(function(producto) {
+        filtrarProductos(categoria);
 
-            if (
-                categoria === "todos" ||
-                producto.dataset.categoria === categoria
-            ) {
-                producto.style.display = "block";
-            } else {
-                producto.style.display = "none";
-            }
-
+        botones.forEach(function(b) {
+            b.classList.remove("activo");
         });
+
+        boton.classList.add("activo");
 
     });
 
 });
-const buscador = document.getElementById("buscador");
+
+
+/* BUSCADOR */
 
 buscador.addEventListener("input", function() {
 
@@ -34,7 +56,7 @@ buscador.addEventListener("input", function() {
         const contenido = producto.textContent.toLowerCase();
 
         if (contenido.includes(texto)) {
-            producto.style.display = "block";
+            producto.style.display = "flex";
         } else {
             producto.style.display = "none";
         }
@@ -42,41 +64,45 @@ buscador.addEventListener("input", function() {
     });
 
 });
-const botonesOferta = document.querySelectorAll(".boton-oferta");
 
-botonesOferta.forEach((boton) => {
-    boton.addEventListener("click", (e) => {
+
+/* BOTONES DE OFERTAS */
+
+botonesOferta.forEach(function(boton) {
+
+    boton.addEventListener("click", function(e) {
+
         e.preventDefault();
 
-        const filtro = boton.dataset.filtro;
-        document.querySelectorAll(".filtro").forEach((botonFiltro) => {
-    botonFiltro.classList.remove("activo");
+        const categoria = boton.dataset.filtro;
 
-    if (botonFiltro.dataset.filtro === filtro) {
-        botonFiltro.classList.add("activo");
-    }
-});
+        filtrarProductos(categoria);
 
-        document.querySelectorAll(".producto").forEach((producto) => {
+        botones.forEach(function(botonFiltro) {
+
+            botonFiltro.classList.remove("activo");
+
             if (
-                filtro === "todos" ||
-                producto.dataset.categoria === filtro
+                botonFiltro.dataset.filtro.toLowerCase() ===
+                categoria.toLowerCase()
             ) {
-                producto.style.display = "flex";
-            } else {
-                producto.style.display = "none";
+                botonFiltro.classList.add("activo");
             }
+
         });
 
-       const productoVisible = Array.from(
-    document.querySelectorAll(".producto")
-).find((producto) => producto.style.display !== "none");
+        const productoVisible =
+            Array.from(productos).find(function(producto) {
+                return producto.style.display !== "none";
+            });
 
-if (productoVisible) {
-    productoVisible.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
+        if (productoVisible) {
+            productoVisible.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+        }
+
     });
-}
-    });
+
 });
