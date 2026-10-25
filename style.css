@@ -50,6 +50,7 @@ button:hover {
     height: 200px;
     object-fit: contain;
     border-radius: 8px;
+    margin-bottom: 10px;
 }
 .productos {
     display: flex;
@@ -193,4 +194,12 @@ button:hover {
 
 .formulario-contacto button {
     margin: 0;
+}
+.producto {
+    display: flex;
+    flex-direction: column;
+}
+
+.producto .boton-amazon {
+    margin-top: auto;
 }
