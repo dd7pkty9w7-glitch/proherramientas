@@ -524,6 +524,7 @@ header.cabecera nav.menu a:focus {
     border: 1px solid #d1d5db;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
     box-sizing: border-box;
+    text-align: center;
 }
 
 .ventaja h3 {
