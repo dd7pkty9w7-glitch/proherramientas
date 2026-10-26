@@ -473,3 +473,22 @@ button:hover {
         font-size: 16px;
     }
 }
+.menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu a,
+.menu a:link,
+.menu a:visited {
+    color: #243244 !important;
+    text-decoration: none !important;
+    font-weight: 600;
+}
+
+.menu a:hover,
+.menu a:focus {
+    color: #ff9900 !important;
+}
