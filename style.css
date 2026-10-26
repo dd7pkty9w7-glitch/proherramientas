@@ -492,3 +492,17 @@ button:hover {
 .menu a:focus {
     color: #ff9900 !important;
 }
+header.cabecera nav.menu a,
+header.cabecera nav.menu a:link,
+header.cabecera nav.menu a:visited {
+    color: #243244 !important;
+    -webkit-text-fill-color: #243244 !important;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+header.cabecera nav.menu a:hover,
+header.cabecera nav.menu a:focus {
+    color: #ff9900 !important;
+    -webkit-text-fill-color: #ff9900 !important;
+}
