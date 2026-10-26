@@ -506,3 +506,31 @@ header.cabecera nav.menu a:focus {
     color: #ff9900 !important;
     -webkit-text-fill-color: #ff9900 !important;
 }
+.ventajas {
+    max-width: 1100px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+    );
+    gap: 20px;
+}
+
+.ventaja {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.ventaja h3 {
+    margin-top: 0;
+    color: #243244;
+}
+
+.ventaja p {
+    color: #4b5563;
+    line-height: 1.6;
+}
